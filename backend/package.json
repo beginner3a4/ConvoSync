@@ -4,9 +4,10 @@
   "description": "backend server of my Microsoft Teams Clone",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Pranjal Jain",
+  "author": "bhushan Yadav",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
