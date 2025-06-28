@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* Add to e:\Downloads\ConnectX-master\ConnectX-master\frontend\src\index.css */
+
+footer {
+  font-family: inherit;
+  letter-spacing: 0.01em;
+  box-shadow: 0 -1px 6px rgba(0,0,0,0.04);
+}
+
+footer a {
+  color: #ffb300;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+footer a:hover {
+  color: #fff;
+}
