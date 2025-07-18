@@ -4,70 +4,22 @@
   margin-left: 3%;
   margin-right: 4%;
   margin-top: 0.2%;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
 }
 
 .chat-room .list {
   overflow-y: scroll;
   height: 70vh;
-}
-
-.chat-header {
-  font-size: 2rem;
-  font-weight: 600;
-  padding-left: 2%;
-  padding-top: 1%;
-  height: 70px;
-  border-bottom: 2px solid rgba(186, 190, 190, 0.8);
-  display: flex;
-  justify-content: space-between;
-}
-
-.add-user {
-  color: #55868a;
-  font-size: 1.7rem;
-  align-self: baseline;
-  display: flex;
-  padding-bottom: 5px;
-}
-
-.add-user .icon {
-    margin-top: 10px;
-} 
-.add-user .icon:focus {
-  outline: 0 !important;
-}
-
-.mail-input {
-  font-size: 1rem;
-  height: 40px;
-  width: 15vw;
-  margin-right: 10px;
-  border:0px solid transparent ;
-  border-bottom: 2px solid #55868a;
-}
-
-.mail-input:focus {
-  outline: none !important;
-}
-
-.more-optns {
-  align-self: flex-end;
-  margin-right: 5%;
-  margin-bottom: 1.5%;
-  cursor: pointer;
-}
-
-.optn-list {
-  font-size: 1.5rem;
-  color: #55868a;
+  background: linear-gradient(to bottom, #f8f9fa, #ffffff);
 }
 
 .msg-div {
-  background-color: white;
-  border: 2px solid #edeef1;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border: 1px solid #e9ecef;
   margin-bottom: 10px;
-  border-radius: 1rem;
-  /* min-height: 70px; */
+  border-radius: 18px;
   margin-left: 3%;
   margin-top: 2%;
   height: auto;
@@ -76,56 +28,128 @@
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.msg-div::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #667eea, #764ba2);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.msg-div:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.msg-div:hover::before {
+  opacity: 1;
 }
 
 .msg-top {
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   margin-left: 5%;
   margin-top: 2%;
+  color: #495057;
 }
 
 .msg-mid {
   margin-left: 5%;
   margin-top: 2%;
   margin-right: 2%;
-  color: rgb(44, 41, 41);
+  color: #212529;
   overflow: hidden;
   height: auto;
   word-wrap: break-word;
+  line-height: 1.5;
 }
 
 .msg-bottom {
   align-self: flex-end;
   margin-right: 5%;
   margin-bottom: 3%;
-  color: grey;
+  color: #6c757d;
+  font-size: 0.85rem;
 }
 
 .msg-self {
-  /* align-self: flex-end; */
   margin-left: 59%;
   margin-right: 1%;
-  border: 2px solid transparent;
-  background-color: #eff5f5;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.msg-self .msg-top,
+.msg-self .msg-mid {
+  color: white;
+}
+
+.msg-self .msg-bottom {
+  color: rgba(255,255,255,0.8);
+}
+
+.msg-self::before {
+  background: linear-gradient(to bottom, #ffffff, #f8f9fa);
 }
 
 a {
-  color: rgb(59, 59, 59) !important;
+  color: #495057 !important;
   text-decoration: none !important;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #667eea !important;
 }
 
 #style::-webkit-scrollbar-track {
   border-radius: 10px;
-  background-color: #f5f5f5;
+  background-color: #f8f9fa;
 }
 
 #style::-webkit-scrollbar {
-  width: 6px;
-  background-color: #f5f5f5;
+  width: 8px;
+  background-color: #f8f9fa;
 }
 
 #style::-webkit-scrollbar-thumb {
-  border-radius: 8px;
-  background-color: rgb(202, 202, 202);
+  border-radius: 10px;
+  background: linear-gradient(to bottom, #667eea, #764ba2);
+  transition: background 0.2s ease;
+}
+
+#style::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #764ba2, #667eea);
+}
+
+/* Document/File attachment styling */
+.doc {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 12px;
+  margin-top: 8px;
+  display: inline-block;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
+}
+
+.doc:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.4);
+}
+
+.doc a {
+  color: white !important;
+  font-weight: 500;
 }
