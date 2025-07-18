@@ -128,7 +128,7 @@ function ChatHeader(props) {
       userEmail,
       userName,
       roomName,
-      inviteLink: `${process.env.REACT_APP_ENV}/invite/${roomIdSelected}`,
+      inviteLink: `${window.location.origin}/invite/${roomIdSelected}`,
     };
 
     axios
