@@ -125,6 +125,7 @@ function TopBar(props) {
         <Box className={classes.userSection}>
           <Chip
             avatar={<Avatar>{getInitials(name)}</Avatar>}
+            }
             label={name}
             className={classes.userChip}
             variant="outlined"
