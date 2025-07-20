@@ -10,6 +10,9 @@ function ChatRoomJoining(props) {
   const userId = props.auth.user?._id;
 
   useEffect(() => {
+    // Only attempt to join if userId is available (user is authenticated)
+    if (!userId) return;
+
     const config = {
       headers: {
         'Content-Type': 'application/json',
@@ -33,9 +36,12 @@ function ChatRoomJoining(props) {
           props.history.push(`/error`);
         }
       })
-      .catch((err) => console.log(err));
-      
-  }, []);
+      .catch((err) => {
+        console.log(err);
+        props.history.push(`/error`);
+      });
+
+  }, [userId, chatRoomId, props.history]); // Depend on userId so it runs when user logs in
 
   return (
     <div id='loading-bg'>
@@ -50,7 +56,7 @@ function ChatRoomJoining(props) {
 
 function mapStateToProps(state) {
   return {
-    auth: state.auth,
+    auth:state.auth,
   };
 }
 
