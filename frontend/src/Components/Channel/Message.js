@@ -113,6 +113,7 @@ function Message(props) {
           
           <Box className={classes.messageContent}>
             {chatMessage && <Typography variant="body2">{chatMessage}</Typography>}
+            }
             
             {fileName && (
               <a 
