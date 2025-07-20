@@ -96,7 +96,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Message(props) {
   const classes = useStyles();
-  const { chatMessage, chatTime, userName, userId, fileName, base64String,userMail } =
+  const { chatMessage, chatTime, userName, userId, fileName, base64String, userMail } =
     props.msg;
   const id = props.auth?.user?._id;
 
@@ -113,7 +113,6 @@ function Message(props) {
           
           <Box className={classes.messageContent}>
             {chatMessage && <Typography variant="body2">{chatMessage}</Typography>}
-            }
             
             {fileName && (
               <a 
@@ -136,35 +135,6 @@ function Message(props) {
       </Box>
       <ReactTooltip effect="solid" place="top" />
     </Box>
-  );
-}
-
-function mapStateToProps(state) {
-  return {
-    auth: state.auth,
-  };
-}
-
-export default connect(mapStateToProps)(Message);
-
-          {fileName ? (
-            <div
-              data-tip='Click Here to Download'
-              data-background-color='#497174'
-              className='doc'
-            >
-              {' '}
-              <a download href={base64String} target='_blank'>
-                {fileName}
-              </a>{' '}
-            </div>
-          ) : null}
-        </div>
-
-        <div className='msg-bottom'>{chatTime}</div>
-        <ReactTooltip />
-      </div>
-    </>
   );
 }
 

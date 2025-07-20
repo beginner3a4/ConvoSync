@@ -12,7 +12,6 @@ import {
 } from '@material-ui/core';
 import { logout } from '../../actions/auth';
 import { connect } from 'react-redux';
-import Profile from './Profile';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUsers, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 
@@ -102,7 +101,6 @@ function TopBar(props) {
   };
 
   const name = props.auth?.user?.name;
-  const email = props.auth?.user?.email;
 
   const getInitials = (name) => {
     return name ? name.split(' ').map(n => n[0]).join('').toUpperCase() : '';
@@ -111,7 +109,6 @@ function TopBar(props) {
   return (
     <AppBar position='static' className={classes.appBar} elevation={0}>
       <Toolbar className={classes.toolbar}>
-        {/* Logo Section */}
         <Box className={classes.logo}>
           <Box className={classes.logoIcon}>
             <FontAwesomeIcon icon={faUsers} />
@@ -121,11 +118,9 @@ function TopBar(props) {
           </Typography>
         </Box>
 
-        {/* User Section */}
         <Box className={classes.userSection}>
           <Chip
             avatar={<Avatar>{getInitials(name)}</Avatar>}
-            }
             label={name}
             className={classes.userChip}
             variant="outlined"
