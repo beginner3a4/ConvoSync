@@ -33,17 +33,37 @@ const useStyles = makeStyles((theme) => ({
     height: 'calc(100vh - 80px)',
     gap: theme.spacing(2),
     padding: theme.spacing(2),
+    [theme.breakpoints.down('md')]: {
+      flexDirection: 'column',
+      height: 'auto',
+      minHeight: 'calc(100vh - 80px)',
+    },
   },
   sidebar: {
     flexShrink: 0,
+    [theme.breakpoints.down('md')]: {
+      width: '100%',
+      order: 1,
+    },
   },
   sideList: {
     flexShrink: 0,
     width: '320px',
+    [theme.breakpoints.down('lg')]: {
+      width: '280px',
+    },
+    [theme.breakpoints.down('md')]: {
+      width: '100%',
+      order: 2,
+    },
   },
   display: {
     flex: 1,
     minWidth: 0,
+    [theme.breakpoints.down('md')]: {
+      order: 3,
+      minHeight: '400px',
+    },
   },
 }));
 
