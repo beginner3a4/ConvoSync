@@ -37,7 +37,7 @@ function Footer() {
       <div style={containerStyle}>
         <div style={leftStyle}>
           <div>
-            <b>Made with </b><span style={{ color: '#dc3545', fontWeight: 600 }}>&hearts;</span> by <b>Bhushan</b>
+            <b>Made with </b><span style={{ color: '#dc3545', fontWeight: 600 }}>&hearts;</span> by <b>Khushi Yadav</b>
           </div>
           <div>
             <span>Delhi, India</span>
