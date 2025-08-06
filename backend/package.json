@@ -1,13 +1,13 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "backend server of my Microsoft Teams Clone",
+  "description": "backend server of ConvoSync",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "bhushan Yadav",
+  "author": "Khushi",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
